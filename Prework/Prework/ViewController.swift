@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberOfPetsLabel: UILabel!
     @IBOutlet weak var PetCountStepper: UIStepper!
     
-    // New outlets for additional features
     @IBOutlet weak var favoriteColorTextField: UITextField!
     @IBOutlet weak var hometownTextField: UITextField!
     @IBOutlet weak var majorTextField: UITextField!
@@ -29,7 +28,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var MorePets_Switch: UISwitch!
     
-    // Action for changing background color
     @IBAction func changeBackgroundColor(_ sender: UIButton) {
         let colors: [UIColor] = [
             .systemBlue,
@@ -50,7 +48,7 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    // Action for showing additional user info
+    
     @IBAction func showAdditionalInfo(_ sender: UIButton) {
         let additionalInfo = """
         Additional Information:
@@ -68,7 +66,7 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    // Action for showing a fun fact about the user
+    
     @IBAction func showFunFact(_ sender: UIButton) {
         let funFacts = [
             "Did you know that \(firstNameTextField.text ?? "you") is studying at \(schoolNameTextField.text ?? "an amazing school")?",
@@ -87,20 +85,14 @@ class ViewController: UIViewController {
     
     @IBAction func introduceSelfDidTapped(_ sender: UIButton) {
 
-        // Lets us choose the title we have selected from the segmented control
-        // In our example that is whether it is first, second, third or forth
         let year = yearSegmentedControl.titleForSegment(at: yearSegmentedControl.selectedSegmentIndex)
 
-        // Creating a constant of type string that holds an introduction. The introduction receives the values from the outlet connections.
         let introduction = "My Name is \(firstNameTextField.text!) \(lastNameTextField.text!) and I go to \(schoolNameTextField.text!). Currently, I am in my \(year!) year and I own \(numberOfPetsLabel.text!) cats. It is \(MorePets_Switch.isOn) that I want more pets, maybe some dogs?."
         
-        // Creates the alert where we pass in our message, which our introduction.
         let alertController = UIAlertController(title: "My Introduction", message: introduction, preferredStyle: .alert)
 
-        // A way to dismiss the box once it pops up
         let action = UIAlertAction(title: "Nice to meet you!", style: .default, handler: nil)
 
-        // Passing this action to the alert controller so it can be dismissed
         alertController.addAction(action)
 
         present(alertController, animated: true, completion: nil)
