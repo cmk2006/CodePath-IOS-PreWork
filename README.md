@@ -1,9 +1,10 @@
-NAME_OF_YOUR_APP_HERE
-App Description
+Self Intro Generator
+
+
 This app is a self introduction app, used in creating a short templated introduction for one self. The user (likely a student) can enter details about his or herself and get a template response
 
 App Walk-though
-https://imgur.com/a/chPuije
+https://github.com/cmk2006/CodePath-IOS-PreWork/blob/main/Kapture%202025-08-31%20at%2017.59.53.gif
 
 Required Features
 [x]1. App displays an image of a school's logo
